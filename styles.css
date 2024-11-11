@@ -1,0 +1,1090 @@
+  :root {
+      --grises-paleta1-1: #F6F5F2;
+      --grises-paleta1-2: #F2F0EB;
+      --grises-paleta1-3: #928A88;
+      --grises-paleta1-4: #7B746B;
+      --grises-paleta1-5: #2A2725;
+
+      
+      
+      --grises-paleta2-1: #F2F2F2;
+      --grises-paleta2-2: #A09F9D;
+      --grises-paleta2-3: #7C7A76;
+      --grises-paleta2-4: #46443E;
+      --grises-paleta2-5: #2B2B29;
+
+      
+      --rojos-paleta1-1: #ff4524;
+      --rojos-paleta1-2: #E7582F;
+      --rojos-paleta1-3: #D57614;
+      --rojos-paleta1-4: #AC733C;
+      --rojos-paleta1-5: #FFC642;
+      
+
+      
+      --azules-paleta1-1: #f3fbff;
+      --azules-paleta1-2: #a8ceff;
+      --azules-paleta1-3: #6490C8;
+      --azules-paleta1-4: #0c3283;
+      --azules-paleta1-5: #091137;
+
+
+      
+      --pieza-paleta1-1: #3C3839;
+      --pieza-paleta1-2: #6B6B6B;
+      --pieza-paleta1-3: #949494;
+      --pieza-paleta1-4: #B3B3B3;
+      --pieza-paleta1-5: #F6F6F4;
+
+      --pieza-paleta2-1: #141412;
+      --pieza-paleta2-2: #3C3D38;
+      --pieza-paleta2-3: #9EA09B;
+      --pieza-paleta2-4: #E6EEE9;
+      --pieza-paleta2-5: #FDFFFF;
+
+    }
+    #carouselExampleDark{
+      margin-top: 1%;
+      margin-bottom: 1%;
+      border-bottom: 1px solid var(--grises-paleta2-2);
+      border-top: 1px solid var(--grises-paleta2-2);
+
+    }
+
+    #carouselExampleDark img{
+
+      object-fit: contain;
+      width: 100%;
+      height: 100%; 
+      max-height: 40vh;
+      overflow: hidden;
+      padding-bottom: 10px;
+     
+
+    } 
+    .oxygen-light {
+      font-family: "Oxygen", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+    }
+    
+    .oxygen-regular {
+      font-family: "Oxygen", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    
+    .oxygen-bold {
+      font-family: "Oxygen", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    .formContainer{
+      
+      box-sizing: content-box;
+      position: relative;
+      left: 10vw;  
+      width: 30rem;    
+      margin: 10rem;
+      border: solid #2A2725;
+      padding: 2%;
+    }
+
+  .menuHamburguesa{
+    display: none;
+  }
+    button {
+      border: none;
+      color: var(--grises-paleta1-1);
+      background-color: var(--rojos-paleta1-1);
+      padding: 0.5rem 1.1rem;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 1.3rem;
+      cursor: pointer;
+      border-radius: 0.5rem;
+      margin: 2rem;
+    }
+    
+
+    html {
+      min-height: 100%;
+      position: relative;
+    }
+  body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+      background-color: var(--azules-paleta1-1);
+      color: var(--grises-paleta1-5);
+  }
+  header{
+      background-color: var(--azules-paleta1-2);
+      padding: 0.3%;
+  }
+
+  nav li{
+      display: inline-block;
+      font-size: 1rem;
+      padding: 0.5rem;
+      padding-left: 2rem;
+    
+  }
+  nav{
+      
+    color:  var(--azules-paleta1-5);
+  }
+  footer{
+      display: flex;
+      justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: smaller;
+  }
+
+
+  nav a {
+    outline: none;
+    text-decoration: none;
+    color:  var(--azules-paleta1-5);
+    /*padding: 2px 1px 0;*/
+  }
+
+  /*
+  nav a:link {
+    color: #265301;
+  }*/
+
+  nav a:visited {
+    /*
+    color: #437a16; */
+    outline: none;
+    text-decoration: none;
+    
+    color:  var(--azules-paleta1-5);
+  }
+
+  nav a:focus {
+    border-bottom: 1px solid;
+    background:var(--azules-paleta1-4);
+  }
+
+  nav a:hover {
+    color: var(--azules-paleta1-1);
+    margin: 1%;
+    padding: 1em;
+    border-bottom: 1px solid var(--azules-paleta1-5);
+    background: var(--azules-paleta1-4);
+    border-radius: 1em;
+  }
+
+
+  .carrito:hover{
+
+      background-color: var(--rojos-paleta1-1);
+  }
+
+
+
+
+
+  @media only screen and (max-width: 300px)  {  
+
+    header{
+      padding-right: 3%;
+      padding-left: 3%;
+      width: 100vw;
+      height: 10vh;
+  }
+
+  nav{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+  nav > h1{
+    display: block;
+    grid-column: 1;
+
+  }
+  nav > ul{
+    display: none;
+  }
+  nav > .carrito{
+  grid-column: 3;
+  grid-row: 1;
+  position: relative;
+  top: 0.5rem;
+  }
+
+  .menuHamburguesa{
+    display: initial;
+    grid-column: 4;
+    padding: 1rem;
+    position: relative;
+    font-size: 2.5rem;
+    top: -1rem;
+
+    
+  }
+  .menuHamburguesa :hover {
+  background-color: var(--rojos-paleta1-1);
+  }
+  .menuHamburguesa > i{
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    top: 1rem;
+  }
+
+  main{
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+      padding-left: 9vw;
+      padding-right: 9vw;
+  }
+  footer{
+      background-color: var(--azules-paleta1-2);
+      color: var(--grises-paleta1-5);
+      height: 10vh;
+      margin-top: 10% ;
+      position: relative;
+      bottom: 0;
+      
+      
+  }
+
+  .card{
+      display: flex;
+      flex-direction: column;
+      padding: 1%;
+      margin: 1%;
+      box-sizing: content-box;
+      max-width: 90vw;
+      border: 1px solid var(--grises-paleta1-3);
+      border-radius: 0.3rem;    
+      background-color: whitesmoke;
+      
+
+  }
+
+  .card > .fotoProducto{
+    
+      z-index: 1;
+      object-fit: cover;
+      background-color: white;
+  }
+  .carrito {
+      padding: 1em;
+      border-radius: 1rem;
+      width: 2rem;
+      height: 2rem;
+      margin: 1%;
+
+  }
+
+  .card > .descripcionCard{
+    
+    background-color: var(--azules-paleta1-1);
+    
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-template-rows: auto auto;
+      padding: 2%;
+
+  }
+  .card > .descripcionCard > .nombre{
+    grid-column: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .card > .descripcionCard> .carritoDiv{
+    grid-row: 2;
+    grid-column: 2;
+  }
+  .precio{ 
+    color: var(--azules-paleta1-1);
+    background-color: rgb(58, 255, 51);;
+    border-radius: 1em;
+    border: rgba(255, 255, 30, 0.705) ;
+    border-style:dashed;
+    font-size:larger;
+    grid-row: 2;
+    grid-column: 1;
+    align-items: center;
+    width:fit-content;
+    height: fit-content;
+    padding: 1rem;
+  }
+  .cardContainer{ 
+    display: block;
+    max-width: 95vw;
+    flex-wrap: wrap;
+  }
+  section{
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    margin: auto;
+    padding: 1%;
+  
+  }
+  button {
+    border: none;
+    color: var(--grises-paleta1-1);
+    background-color: var(--rojos-paleta1-1);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.3rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    margin: 2rem;
+  }
+
+  }
+
+
+
+
+
+
+
+
+
+
+  @media only screen and (min-width: 301px) and (max-width: 600px)  {  
+
+    header{
+      padding-right: 3%;
+      padding-left: 3%;
+      width: 100vw;
+      height: 10vh;
+  }
+
+  nav{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+  nav > h1{
+    display: block;
+    grid-column: 1;
+
+  }
+  nav > ul{
+    display: none;
+  }
+  nav > .carrito{
+  grid-column: 2;
+  grid-row: 1;
+  position: relative;
+  top: 0.5rem;
+  }
+
+  .menuHamburguesa{
+    display: initial;
+    grid-column: 4;
+    padding: 1rem;
+    position: relative;
+    /*top: -2rem;*/
+    font-size: 2.5rem;
+    top: -1rem;
+
+    
+  }
+  .menuHamburguesa :hover {
+  background-color: var(--rojos-paleta1-1);
+  }
+  .menuHamburguesa > i{
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    top: 1rem;
+  }
+
+  main{
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+      padding-left: 9vw;
+      padding-right: 9vw;
+  }
+  footer{
+      background-color: var(--azules-paleta1-2);
+      color: var(--grises-paleta1-5);
+      height: 10vh;
+      margin-top: 10% ;
+      position: relative;
+      bottom: 0;
+      
+      
+  }
+
+  .card{
+      display: flex;
+      flex-direction: column;
+      padding: 1%;
+      margin: 1%;
+      box-sizing: content-box;
+      max-width: 90vw;
+      border: 1px solid var(--grises-paleta1-3);
+      border-radius: 0.3rem;    
+      background-color: whitesmoke;
+      
+
+  }
+
+  .card > .fotoProducto{
+    
+      z-index: 1;
+      object-fit: cover;
+      background-color: white;
+  }
+  .carrito {
+      padding: 1em;
+      border-radius: 1rem;
+      width: 2rem;
+      height: 2rem;
+      margin: 1%;
+
+  }
+
+  .card > .descripcionCard{
+    
+    background-color: var(--azules-paleta1-1);
+    
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-template-rows: auto auto;
+      padding: 2%;
+
+  }
+  .card > .descripcionCard > .nombre{
+    grid-column: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .card > .descripcionCard> .carritoDiv{
+    grid-row: 2;
+    grid-column: 2;
+  }
+  .precio{ 
+    color: var(--azules-paleta1-1);
+    background-color: rgb(58, 255, 51);;
+    border-radius: 1em;
+    border: rgba(255, 255, 30, 0.705) ;
+    border-style:dashed;
+    font-size:larger;
+    grid-row: 2;
+    grid-column: 1;
+    align-items: center;
+    width:fit-content;
+    height: fit-content;
+    padding: 1rem;
+  }
+  .cardContainer{ 
+    display: block;
+    max-width: 95vw;
+    flex-wrap: wrap;
+  }
+  section{
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    margin: auto;
+    padding: 1%;
+  
+  }
+  button {
+    border: none;
+    color: var(--grises-paleta1-1);
+    background-color: var(--rojos-paleta1-1);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.3rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    margin: 2rem;
+  }
+
+  }
+
+
+
+  @media screen and (min-width:720px) {
+
+    .menuHamburguesa{
+      display: none;
+    }
+      
+      header{
+        padding-right: 3%;
+        padding-left: 3%;
+        width: 100vw;
+    }
+  
+  
+      nav ul{
+        display: initial;
+        grid-column: 2 / span 3;
+        mask-size: auto;
+        max-width: fit-content;
+        grid-row: 1;
+      
+      }
+      
+      
+      
+      nav{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+      }
+      nav > h1{
+        display: block;
+        grid-column: 1;
+      
+      }
+      
+    .card{
+      display: flex;
+      flex-direction: column;
+      padding: 1%;
+      margin: 1%;
+      box-sizing: content-box;
+      max-width: 40vw;
+      border: 1px solid var(--grises-paleta1-3);
+      border-radius: 0.3rem;    
+      background-color: whitesmoke;
+      
+  
+    }
+  
+    .card > .fotoProducto{
+  
+      z-index: 1;
+      object-fit: cover;
+      background-color: white;
+    }
+  
+    .carrito {                                                                    
+      padding: 1em;
+      border-radius: 1rem;
+      width: 2rem;
+      height: 2rem;
+      margin: 1%;
+      grid-column: 4 / 5;
+      grid-row: 1;
+      position: relative;
+      top: 0.5em;
+    }
+  
+    .card > .descripcionCard{
+  
+    background-color: var(--azules-paleta1-1);
+  
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-template-rows: auto auto;
+      padding: 2%;
+  
+    }
+    .card > .descripcionCard > .nombre{
+    grid-column: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    }
+  
+    .card > .descripcionCard> .carritoDiv{
+    grid-row: 2;
+    grid-column: 2;
+    }
+    .precio{ 
+    color: var(--azules-paleta1-1);
+    background-color: rgb(58, 255, 51);;
+    border-radius: 1em;
+    border: rgba(255, 255, 30, 0.705) ;
+    border-style:dashed;
+    font-size:larger;
+    grid-row: 2;
+    grid-column: 1;
+    align-items: center;
+    width:fit-content;
+    height: fit-content;
+    padding: 1rem;
+    }
+    .cardContainer{ 
+    display: grid;
+    grid-template-columns: auto auto;
+    max-width: 99vw;
+  
+      
+    }
+    section{
+      display: flex;
+      justify-content: center;
+      gap: 5%;
+      margin: auto;
+      padding: 1%;
+    
+    }
+  
+    }
+  
+
+
+
+
+
+  @media only screen and (min-width: 720px) and( orientation: landscape)  {
+
+    header{
+      padding-right: 3%;
+      padding-left: 3%;
+      width: 100vw;
+      height: 40vh;
+  }
+
+  nav{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+  nav > h1{
+    display: block;
+    grid-column: 1;
+
+  }
+  nav > ul{
+    display: none;
+  }
+  nav > .carrito{
+  grid-column: 2;
+  grid-row: 1;
+  position: relative;
+  top: 0;
+  }
+
+  .menuHamburguesa{
+    display: initial;
+    grid-column: 4;
+    padding: 1rem;
+    position: relative;
+    /*top: -2rem;*/
+    font-size: 2.5rem;
+    top: -1.7rem;
+
+    
+  }
+  .menuHamburguesa :hover {
+  background-color: var(--rojos-paleta1-1);
+  }
+  .menuHamburguesa > i{
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    top: 1rem;
+  }
+
+  main{
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+      padding-left: 9vw;
+      padding-right: 9vw;
+  }
+  footer{
+      background-color: var(--azules-paleta1-2);
+      color: var(--grises-paleta1-5);
+      height: 10vh;
+      margin-top: 10% ;
+      position: relative;
+      bottom: 0;
+      
+      
+  }
+
+  .card{
+      display: flex;
+      flex-direction: column;
+      padding: 1%;
+      margin: 1%;
+      box-sizing: content-box;
+      max-width: 40vw;
+      border: 1px solid var(--grises-paleta1-3);
+      border-radius: 0.3rem;    
+      background-color: whitesmoke;
+      
+
+  }
+
+  .card > .fotoProducto{
+    
+      z-index: 1;
+      object-fit: cover;
+      background-color: white;
+  }
+  .carrito {
+      padding: 1em;
+      border-radius: 1rem;
+      width: 2rem;
+      height: 2rem;
+      margin: 1%;
+
+  }
+
+  .card > .descripcionCard{
+    
+    background-color: var(--azules-paleta1-1);
+    
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-template-rows: auto auto;
+      padding: 2%;
+
+  }
+  .card > .descripcionCard > .nombre{
+    grid-column: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .card > .descripcionCard> .carritoDiv{
+    grid-row: 2;
+    grid-column: 2;
+  }
+  .precio{ 
+    color: var(--azules-paleta1-1);
+    background-color: rgb(58, 255, 51);;
+    border-radius: 1em;
+    border: rgba(255, 255, 30, 0.705) ;
+    border-style:dashed;
+    font-size:larger;
+    grid-row: 2;
+    grid-column: 1;
+    align-items: center;
+    width:fit-content;
+    height: fit-content;
+    padding: 1rem;
+  }
+  .cardContainer{ 
+    display: grid;
+    grid-template-columns: auto auto;
+    max-width: 99vw;
+
+    
+
+  }
+  section{
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    margin: auto;
+    padding: 1%;
+  
+  }
+
+
+  button {
+    border: none;
+    color: var(--grises-paleta1-1);
+    background-color: var(--rojos-paleta1-1);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.3rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    margin: 2rem;
+  }
+
+
+
+
+  }
+
+
+  @media only screen and (min-width: 600px) and ( max-width: 720px) and (orientation: portrait) {
+
+
+    header{
+     
+      padding-right: 3%;
+      padding-left: 3%;
+      width: 100vw;
+      height: 10vh;
+  }
+
+  .menuHamburguesa :hover {
+  background-color: var(--rojos-paleta1-1);
+  }
+
+
+  main{
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+      padding-left: 9vw;
+      padding-right: 9vw;
+  }
+  footer{
+      background-color: var(--azules-paleta1-2);
+      color: var(--grises-paleta1-5);
+      height: 10vh;
+      margin-top: 10% ;
+      position: relative;
+      bottom: 0;
+      
+      
+  }
+
+  .card{
+      display: flex;
+      flex-direction: column;
+      padding: 1%;
+      margin: 1%;
+      box-sizing: content-box;
+      max-width: 90vw;
+      border: 1px solid var(--grises-paleta1-3);
+      border-radius: 0.3rem;    
+      background-color: whitesmoke;
+      
+
+  }
+
+  .card > .fotoProducto{
+    
+      z-index: 1;
+      object-fit: cover;
+      background-color: white;
+  }
+  .carrito {                                                                    
+      padding: 1em;
+      border-radius: 1rem;
+      width: 2rem;
+      height: 2rem;
+      margin: 1%;
+      grid-column: 4 / 5;
+      grid-row: 1;
+      position: relative;
+      top: 0.5em;
+
+  }
+  .card > .descripcionCard{
+    
+    background-color: var(--azules-paleta1-1);
+    
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-template-rows: auto auto;
+      padding: 2%;
+
+  }
+  .card > .descripcionCard > .nombre{
+    grid-column: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .card > .descripcionCard> .carritoDiv{
+    grid-row: 2;
+    grid-column: 2;
+  }
+  .precio{ 
+    color: var(--azules-paleta1-1);
+    background-color: rgb(58, 255, 51);;
+    border-radius: 1em;
+    border: rgba(255, 255, 30, 0.705) ;
+    border-style:dashed;
+    font-size:larger;
+    grid-row: 2;
+    grid-column: 1;
+    align-items: center;
+    width:fit-content;
+    height: fit-content;
+    padding: 1rem;
+  }
+  .cardContainer{ 
+    display: block;
+    max-width: 95vw;
+    flex-wrap: wrap;
+  }
+  section{
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    margin: auto;
+    padding: 1%;
+  
+  }
+  button {
+    border: none;
+    color: var(--grises-paleta1-1);
+    background-color: var(--rojos-paleta1-1);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.3rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    margin: 2rem;
+  }
+  
+  .menuHamburguesa{
+    display: none;
+  }
+
+  nav ul{
+    display: initial;
+    grid-column: 2 / span 3;
+    mask-size: auto;
+    max-width: fit-content;
+    grid-row: 1;
+
+  }
+
+
+
+  nav{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+  nav > h1{
+    display: block;
+    grid-column: 1;
+
+  }
+
+
+
+  }
+/**/
+
+
+  @media ( min-width: 1320px){
+
+  header{
+    margin-left: 2.4vw;
+    margin-right: 2.4vw;
+      padding-right: 2%;
+      padding-left: 2%;
+      width: 95vw;
+      height: 10vh;
+  }
+  main{
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+      padding-left: 9vw;
+      padding-right: 9vw;
+  }
+  footer{
+      background-color: var(--azules-paleta1-2);
+      color: var(--grises-paleta1-5);
+      height: 10vh;
+      margin-top: 10% ;
+      position: relative;
+      bottom: 0;
+      
+      
+  }
+  nav{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+  nav > h1{
+    display: block;
+    grid-column: 1;
+
+  }
+  nav > ul{
+    display: initial;
+    grid-column: 2/4;
+  }
+  nav > .carrito{
+  grid-column: 4;
+  grid-row: 1;
+  position: relative;
+  top: 0.5rem;
+  }
+  .card{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 1%;
+      margin: 1%;
+      box-sizing: content-box;
+      max-width: 30rem;
+      max-height: 30rem;
+      border: 1px solid var(--grises-paleta1-3);
+      border-radius: 0.3rem;    
+      background-color: whitesmoke;
+      
+
+  }
+
+  .card > .fotoProducto{
+      z-index: 1;
+      object-fit: cover;
+      height: 80%;
+      background-color: white;
+  }
+
+  .card > .descripcionCard{
+      background-color: var(--azules-paleta1-1);
+      padding: 3%;
+      object-fit: cover;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-left: 3%;
+      margin-right: 3%;
+      z-index: 3;
+      height:10%;
+      width: 80%;  
+      
+  }
+  .card > .descripcionCard > .nombre{
+    
+  position: relative;
+  top: -2rem;
+  }
+  .cardContainer{
+    display: flex;
+    justify-content: space-between;
+    max-width: 90vw;
+    flex-wrap: wrap;
+
+  }
+  section{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    max-width: 1240px;  /* eliminar esta restriccion en mediaquery mayor  */
+    margin: auto;
+    padding: 5%;
+  } 
+
+  .menuHamburguesa{
+    display: none;
+  }
+
+
+  }
+
+
+  /*
+  fuente: w3schools 
+
+  @media only screen and (max-width: 600px) {...}
+
+  @media only screen and (min-width: 600px) {...}
+
+  @media only screen and (min-width: 768px) {...}
+
+  @media only screen and (min-width: 992px) {...}
+
+  @media only screen and (min-width: 1200px) {...}
+
+
+
+
+  */

@@ -1,0 +1,173 @@
+:root {
+    /* Paletas de colores */
+    --gris-1: #F6F5F2;
+    --gris-2: #F2F0EB;
+    --gris-3: #928A88;
+    --gris-4: #7B746B;
+    --gris-5: #2A2725;
+
+    --gris-paleta2-1: #F2F2F2;
+    --gris-paleta2-2: #A09F9D;
+    --gris-paleta2-3: #7C7A76;
+    --gris-paleta2-4: #46443E;
+    --gris-paleta2-5: #2B2B29;
+
+    --rojo-1: #ff4524;
+    --rojo-2: #E7582F;
+    --rojo-3: #D57614;
+    --rojo-4: #AC733C;
+    --rojo-5: #FFC642;
+
+    --azul-1: #f3fbff;
+    --azul-2: #a8ceff;
+    --azul-3: #6490C8;
+    --azul-4: #0c3283;
+    --azul-5: #091137;
+
+    --pieza-1: #3C3839;
+    --pieza-2: #6B6B6B;
+    --pieza-3: #949494;
+    --pieza-4: #B3B3B3;
+    --pieza-5: #F6F6F4;
+
+    --pieza-paleta2-1: #141412;
+    --pieza-paleta2-2: #3C3D38;
+    --pieza-paleta2-3: #9EA09B;
+    --pieza-paleta2-4: #E6EEE9;
+    --pieza-paleta2-5: #FDFFFF;
+}
+
+/* Tipografías */
+.oxygen {
+    font-family: "Oxygen", sans-serif;
+}
+.oxygen-light { font-weight: 300; }
+.oxygen-regular { font-weight: 400; }
+.oxygen-bold { font-weight: 700; }
+
+/* Contenedor del formulario */
+.formContainer {
+    box-sizing: content-box;
+    position: relative;
+    left: 10vw;  
+    width: 30rem;    
+    margin: 10rem;
+    border: solid var(--gris-5);
+    padding: 2%;
+}
+
+/* Menú hamburguesa oculto inicialmente */
+.menuHamburguesa { display: none; }
+
+/* Botón general */
+button {
+    border: none;
+    color: var(--gris-1);
+    background-color: var(--rojo-1);
+    padding: 0.5rem 1.1rem;
+    text-align: center;
+    font-size: 1.3rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    margin: 2rem;
+}
+
+/* Estructura de la página */
+html { min-height: 100%; position: relative; }
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    background-color: var(--azul-1);
+    color: var(--gris-5);
+}
+header { background-color: var(--azul-2); padding: 0.3%; }
+footer {
+    display: flex;
+    justify-content: center;
+    font-family: 'Times New Roman', serif;
+    font-size: smaller;
+    background-color: var(--azul-2);
+    color: var(--gris-5);
+    height: 10vh;
+    margin-top: 10%;
+    position: relative;
+    bottom: 0;
+}
+
+/* Navegación */
+nav {
+    color: var(--azul-5);
+}
+nav li { display: inline-block; font-size: 1rem; padding: 0.5rem 2rem; }
+nav a {
+    outline: none;
+    text-decoration: none;
+    color: var(--azul-5);
+}
+nav a:focus, nav a:hover {
+    color: var(--azul-1);
+    margin: 1%;
+    padding: 1em;
+    border-bottom: 1px solid var(--azul-5);
+    background: var(--azul-4);
+    border-radius: 1em;
+}
+.carrito:hover { background-color: var(--rojo-1); }
+
+/* Media Queries */
+@media (max-width: 300px), (min-width: 301px) and (max-width: 600px), (min-width: 599px) and (orientation: landscape), (min-width: 600px) and (max-width: 720px) and (orientation: portrait) {
+    header {
+        padding-right: 3%;
+        padding-left: 3%;
+        width: 100vw;
+        height: 10vh;
+    }
+    nav {
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+    }
+    nav > h1 { grid-column: 1; }
+    nav > ul { display: none; }
+    nav > .carrito { grid-column: 2; grid-row: 1; position: relative; top: 0.5rem; }
+    .menuHamburguesa {
+        display: initial;
+        grid-column: 4;
+        padding: 1rem;
+        font-size: 2.5rem;
+    }
+    .menuHamburguesa:hover { background-color: var(--rojo-1); }
+    main {
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        padding: 0 9vw;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        padding: 1%;
+        margin: 1%;
+        box-sizing: content-box;
+        max-width: 90vw;
+        border: 1px solid var(--gris-3);
+        border-radius: 0.3rem;
+        background-color: whitesmoke;
+    }
+    .cardContainer { display: flex; flex-wrap: wrap; max-width: 95vw; }
+    section {
+        display: flex;
+        justify-content: center;
+        gap: 5%;
+        margin: auto;
+        padding: 1%;
+    }
+    .precio {
+        color: var(--azul-1);
+        background-color: rgb(58, 255, 51);
+        border: dashed rgba(255, 255, 30, 0.705);
+        border-radius: 1em;
+        font-size: larger;
+        padding: 1rem;
+    }
+}
