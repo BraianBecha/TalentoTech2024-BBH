@@ -52,10 +52,15 @@
     left: 10vw;  
     width: 30rem;    
     margin: 10rem;
-    border: solid var(--gris-5);
+    /*
+    border: solid var(--gris-5);*/
+    
+    border: solid var(green);
     padding: 2%;
 }
-
+.texto-descriptivo{
+    background-color: var(--rojo-1);
+}
 /* Menú hamburguesa oculto inicialmente */
 .menuHamburguesa { display: none; }
 
