@@ -18,7 +18,7 @@ function mostrarProductos(dataDeProductos, claseDeContenedor)
         stringCards=stringCards+unaCard  });
 
     document.querySelector(`.${claseDeContenedor}`).innerHTML=stringCards
-    console.log(`se agregó el codigo ${stringCards}`)
+   /* console.log(`se agregó el codigo ${stringCards}`)*/
 
 }
 
@@ -49,7 +49,7 @@ function generarCard(element){
 
 
                   </div> `
-                  console.log(`un string es: ${unString}`)
+                 /* console.log(`un string es: ${unString}`)*/
                   return unString;
                 
 }

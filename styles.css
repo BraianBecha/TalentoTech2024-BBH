@@ -645,7 +645,6 @@
     .card > .descripcionCard > .nombre{
     grid-column: 1;
     grid-column-start: 1;
-    grid-column-end: 3;
     }
   
     .card > .descripcionCard> .carritoDiv{
@@ -1056,7 +1055,7 @@
   }
 
   .card{
-      display: flex;
+      /*display: flex;*/
       flex-direction: column;
       justify-content: center;
       padding: 1%;
@@ -1073,7 +1072,7 @@
 
   .card > .fotoProducto{
       z-index: 1;
-      object-fit: cover;
+      object-fit: contain;
       height: 80%;
       background-color: white;
   }
@@ -1081,22 +1080,48 @@
   .card > .descripcionCard{
       background-color: var(--azules-paleta1-1);
       padding: 3%;
-      object-fit: cover;
-      display: flex;
+      object-fit: cover;     
+      display: grid;/*
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: space-between;*/
       margin-left: 3%;
       margin-right: 3%;
       z-index: 3;
-      height:10%;
+      height:20%;
       width: 80%;  
       
   }
+  .precio{ 
+    color: var(--azules-paleta1-1);
+    background-color: rgb(58, 255, 51);;
+    border-radius: 1em;
+    border: rgba(255, 255, 30, 0.705) ;
+    border-style:dashed;
+    font-size:larger;
+    grid-row: 1;
+    grid-column: 2;
+    align-items: center;
+    width:fit-content;
+    height: fit-content;
+    padding: 1rem;
+  }
+  .card > .descripcionCard > .nombre{
+   
+    grid-column: 1;
+    grid-column-start: 1;
+  }
+  .card > .descripcionCard > .nombre b h4{
+    font-size: clamp(0.3rem ,1rem, 1.5rem);
+    overflow: hidden;
+    grid-column: 1;
+    grid-column-start: 1;
+   }
+  /*
   .card > .descripcionCard > .nombre{
     
   position: relative;
   top: -2rem;
-  }
+  } */
   .cardContainer{
     display: flex;
     justify-content: space-between;
