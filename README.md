@@ -7,6 +7,8 @@ En "Contacto" hay un formulario que permite contactarse con el propietario de la
 
 Las herramientas usadas en el presente proyecto son: 
 <ol>
+ <li> Fake Store API
+</li> 
  <li> Bootstrap
 </li> 
  <li> FontAwesome
@@ -17,8 +19,4 @@ Las herramientas usadas en el presente proyecto son:
 </li> 
   <li> SweetAlert
 </li>
-  
-  
-
-
 </ol>
