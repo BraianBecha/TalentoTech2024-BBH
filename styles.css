@@ -43,6 +43,18 @@
       --pieza-paleta2-5: #FDFFFF;
 
     }
+
+
+    .contador{
+      background-color: var(--azules-paleta1-4);
+      color: #f3fbff;
+      position: fixed;
+      padding: 0.5em;
+      border-radius: 0.7rem;
+     
+    }
+
+
     #carouselExampleDark{
       margin-top: 1%;
       margin-bottom: 1%;
@@ -104,6 +116,7 @@
 
 .texto-descriptivo{
   background-color: var(--grises-paleta1-2);
+  padding: 5%;
 }
 
   .menuHamburguesa{
@@ -127,9 +140,10 @@
     html {
       min-height: 100%;
       position: relative;
+      width: 100vw;
     }
   body{
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;  
@@ -203,13 +217,35 @@
     border-bottom: 1px solid var(--azules-paleta1-5);
     background: var(--azules-paleta1-4);
     border-radius: 1em;
+
+    
   }
 
 
   .carrito:hover{
 
-      background-color: var(--rojos-paleta1-1);
+    color: var(--azules-paleta1-1);
+    margin: 1%;
+    padding: 1em;
+    border-bottom: 1px solid var(--azules-paleta1-5);
+    background: var(--azules-paleta1-4);
+    border-radius: 1em;
   }
+
+  .carritoDiv:hover{
+
+    color: var(--azules-paleta1-1);
+    margin: 1%;
+    padding: 1em;
+    border-bottom: 1px solid var(--azules-paleta1-5);
+    background: var(--azules-paleta1-4);
+    border-radius: 1em;
+}
+.foto-carrito
+{
+  width: 3em;
+  height: 3em;
+}
 
 
 
@@ -247,13 +283,16 @@
   position: relative;
   top: 0.5rem;
   }*/
-
+  .menuFijo{
+    display: none;
+  }
   .menuHamburguesa{
     display: initial;
-    grid-column: 4;
+    grid-column: 3;
     padding: 0rem;
+    margin: 0;
     position: relative;
-    top: -1rem;
+   /* top: -1rem;*/
 
     
   }
@@ -333,9 +372,14 @@
   }
 
   .card > .descripcionCard> .carritoDiv{
-    grid-row: 2;
-    grid-column: 2;
-  }
+    grid-row: 1;
+    grid-column: 3;
+    }
+    .card > .descripcionCard> .carritoDiv img{
+  
+      width: 2rem;
+      height: 2rem;
+      }
   .precio{ 
     color: var(--azules-paleta1-1);
     background-color: rgb(58, 255, 51);;
@@ -375,6 +419,16 @@
     border-radius: 0.5rem;
     margin: 2rem;
   }
+  .boton-carrito{
+    color: var(--grises-paleta1-3);
+    background-color: var(--azules-paleta1-1);
+    margin: 0.5rem;
+    padding: unset;
+    border-radius: 0.5rem;
+    border: solid 1px var(--grises-paleta1-3);
+    width: 5rem;
+    height: 3rem;
+  }
   form{
     max-width: 98%;
     margin-right: 1vw;
@@ -392,6 +446,60 @@
       margin-right: 1vw;
     
   }
+
+  table{
+ 
+    box-sizing: content-box;
+    
+    margin: 10rem;     
+    border: 1px solid var(--grises-paleta2-2);
+    
+background-color: var(--grises-paleta2-1);
+    border-radius: 1rem;
+    padding: 2%;
+
+   /* border: solid 1px var(--grises-paleta2-4);*/
+  }
+  tr{
+    border-bottom: 1px solid var(--grises-paleta2-2);
+    align-items: center;
+  }
+  td{
+    border-bottom: 1px solid var(--grises-paleta2-2);
+    align-items: center; 
+  }
+  .botonEliminarDeCarrito{    
+padding: 1%;
+font-size: small;
+width: 4rem;
+height: 2rem;
+  }
+.tableId{
+  display: none;
+}
+.celda-nombre{
+display: none;
+}
+.lista-carrito{
+  width: 90%;
+  margin: 1%;
+}
+.addCarrito{
+  
+  width: 2rem;
+  height: 2rem;
+  }
+  .contador{
+    background-color: var(--azules-paleta1-4);
+    color: #f3fbff;
+    position: fixed;
+    bottom: 2rem;
+    padding: 0.5em;
+    border-radius: 0.7rem;
+    z-index: 2;
+   
+  }
+
   }
 
 
@@ -422,31 +530,37 @@
   nav > .carrito{
   grid-column: 3;
   grid-row: 1;
-  position: relative;
-  top: 0.5rem;
+  /*position: relative;
+  top: 0.5rem;*/
   }
-
+  .menuFijo{
+    display: none;
+  }
+  .menuHamburguesa{
+  
+    display: initial;
+    z-index: 2;
+  }
+  /*
   .menuHamburguesa{
     display: initial;
     grid-column: 4;
-    padding: 1rem;
     position: relative;
-    /*top: -2rem;*/
+    top: -2rem;
     font-size: 2.5rem;
     top: -1rem;
-
+*/
     
-  }
-  .menuHamburguesa :hover {
-  background-color: var(--rojos-paleta1-1);
-  }
+  
+
+  /*
   .menuHamburguesa > i{
     position: relative;
     width: 2rem;
     height: 2rem;
     top: 1rem;
   }
-
+*/
   main{
       margin-top: 5vh;
       margin-bottom: 5vh;
@@ -501,9 +615,25 @@
   }
 
   .card > .descripcionCard> .carritoDiv{
-    grid-row: 2;
-    grid-column: 2;
-  }
+    grid-row: 1;
+    grid-column: 3;
+    }
+    .card > .descripcionCard> .carritoDiv img{
+  
+      width: 2rem;
+      height: 2rem;
+      }
+      .boton-carrito{
+        color: var(--grises-paleta1-3);
+        background-color: var(--azules-paleta1-1);
+        margin: 0.5rem;
+        padding: unset;
+        border-radius: 0.5rem;
+        border: solid 1px var(--grises-paleta1-3);
+        width: 5rem;
+        height: 3rem;
+      }
+
   .precio{ 
     color: var(--azules-paleta1-1);
     background-color: rgb(58, 255, 51);;
@@ -560,13 +690,32 @@
     margin-right: 1vw;
   
 }
-
+.addCarrito{
+  
+  width: 2rem;
+  height: 2rem;
   }
 
+  
+  .contador{
+    background-color: var(--azules-paleta1-4);
+    color: #f3fbff;
+    position: fixed;
+    bottom: 2rem;
+    padding: 0.5em;
+    border-radius: 0.7rem;
+    z-index: 2;
+   
+  }
+
+}
 
 
   @media screen and (min-width:720px) {
 
+    .menuFijo{
+      display: initial;
+    }
     .menuHamburguesa{
       display: none;
     }
@@ -628,8 +777,8 @@
       margin: 1%;
       grid-column: 4 / 5;
       grid-row: 1;
-      position: relative;
-      top: 0.5em;
+     /* position: relative;
+      top: 0.5em;*/
     }
   
     .card > .descripcionCard{
@@ -640,6 +789,7 @@
       grid-template-columns: auto auto auto;
       grid-template-rows: auto auto;
       padding: 2%;
+      width: 95%;
   
     }
     .card > .descripcionCard > .nombre{
@@ -648,9 +798,39 @@
     }
   
     .card > .descripcionCard> .carritoDiv{
-    grid-row: 2;
-    grid-column: 2;
+    grid-row: 1;
+    grid-column: 3;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    margin: 2rem;
     }
+    .addCarrito{
+  
+      width: 2rem;
+      height: 2rem;
+      }
+      .carritoDiv > .boton-carrito{
+        background-color: var(--azules-paleta1-1);
+       
+      }
+      .boton-carrito:hover{
+        
+    background-color: var(--rojos-paleta1-1);
+
+      }
+      
+  .boton-carrito{
+    color: var(--grises-paleta1-3);
+    background-color: var(--azules-paleta1-1);
+    margin: 0.5rem;
+    padding: unset;
+    border-radius: 0.5rem;
+    border: solid 1px var(--grises-paleta1-3);
+    width: 5rem;
+    height: 3rem;
+  }
     .precio{ 
     color: var(--azules-paleta1-1);
     background-color: rgb(58, 255, 51);;
@@ -681,7 +861,16 @@
     
     }
    
-  
+    .contador{
+      background-color: var(--azules-paleta1-4);
+      color: #f3fbff;
+      position: fixed;
+      bottom: 2rem;
+      padding: 0.5em;
+      border-radius: 0.7rem;
+      z-index: 2;
+     
+    }
     }
   
 
@@ -690,7 +879,16 @@
 
 
   @media only screen and (min-width: 720px) and( orientation: landscape)  {
-
+    .contador{
+      background-color: var(--azules-paleta1-4);
+      color: #f3fbff;
+      position: fixed;
+      bottom: 2rem;
+      padding: 0.5em;
+      border-radius: 0.7rem;
+      z-index: 2;
+     
+    }
     header{
       padding-right: 3%;
       padding-left: 3%;
@@ -713,8 +911,8 @@
   nav > .carrito{
   grid-column: 2;
   grid-row: 1;
-  position: relative;
-  top: 0;
+ /* position: relative;
+  top: 0;*/
   }
 
   .menuHamburguesa{
@@ -729,7 +927,12 @@
     
   }
   .menuHamburguesa :hover {
-  background-color: var(--rojos-paleta1-1);
+    color: var(--azules-paleta1-1);
+    margin: 1%;
+    padding: 1em;
+    border-bottom: 1px solid var(--azules-paleta1-5);
+    background: var(--azules-paleta1-4);
+    border-radius: 1em;
   }
   .menuHamburguesa > i{
     position: relative;
@@ -801,9 +1004,14 @@
   }
 
   .card > .descripcionCard> .carritoDiv{
-    grid-row: 2;
-    grid-column: 2;
-  }
+    grid-row: 1;
+    grid-column: 3;
+    }
+    .card > .descripcionCard> .carritoDiv img{
+  
+      width: 2rem;
+      height: 2rem;
+      }
   .precio{ 
     color: var(--azules-paleta1-1);
     background-color: rgb(58, 255, 51);;
@@ -849,7 +1057,16 @@
     margin: 2rem;
   }
 
-
+  .boton-carrito{
+    color: var(--grises-paleta1-3);
+    background-color: var(--azules-paleta1-1);
+    margin: 0.5rem;
+    padding: unset;
+    border-radius: 0.5rem;
+    border: solid 1px var(--grises-paleta1-3);
+    width: 5rem;
+    height: 3rem;
+  }
 
 
   }
@@ -857,6 +1074,18 @@
 
   @media only screen and (min-width: 600px) and (max-width: 720) and (orientation: portrait) {
 
+
+
+    .contador{
+      background-color: var(--azules-paleta1-4);
+      color: #f3fbff;
+      position: fixed;
+      bottom: 2rem;
+      padding: 0.5em;
+      border-radius: 0.7rem;
+      z-index: 2;
+     
+    }
 
     header{
      
@@ -916,8 +1145,8 @@
       margin: 1%;
       grid-column: 4 / 5;
       grid-row: 1;
-      position: relative;
-      top: 0.5em;
+     /* position: relative;
+      top: 0.5em;*/
 
   }
   .card > .descripcionCard{
@@ -937,9 +1166,14 @@
   }
 
   .card > .descripcionCard> .carritoDiv{
-    grid-row: 2;
-    grid-column: 2;
-  }
+    grid-row: 1;
+    grid-column: 3;
+    }
+    .card > .descripcionCard> .carritoDiv img{
+  
+      width: 2rem;
+      height: 2rem;
+      }
   .precio{ 
     color: var(--azules-paleta1-1);
     background-color: rgb(58, 255, 51);;
@@ -984,6 +1218,8 @@
     display: none;
   }
 
+ 
+
   nav ul{
     display: initial;
     grid-column: 2 / span 3;
@@ -1005,7 +1241,16 @@
 
   }
 
-
+  .boton-carrito{
+    color: var(--grises-paleta1-3);
+    background-color: var(--azules-paleta1-1);
+    margin: 0.5rem;
+    padding: unset;
+    border-radius: 0.5rem;
+    border: solid 1px var(--grises-paleta1-3);
+    width: 5rem;
+    height: 3rem;
+  }
 
   }
 /**/
@@ -1014,6 +1259,7 @@
   @media ( min-width: 1320px){
 
   header{
+    align-self: center;
       padding-right: 2%;
       padding-left: 2%;
       width: 95vw;
@@ -1031,6 +1277,7 @@
       margin-top: 10% ;
       position: relative;
       bottom: 0;
+      padding: 0;
       
       
   }
@@ -1050,12 +1297,11 @@
   nav > .carrito{
   grid-column: 4;
   grid-row: 1;
-  position: relative;
-  top: 0.5rem;
+  
   }
 
   .card{
-      /*display: flex;*/
+      display: flex;
       flex-direction: column;
       justify-content: center;
       padding: 1%;
@@ -1108,11 +1354,12 @@
   .card > .descripcionCard > .nombre{
    
     grid-column: 1;
-    grid-column-start: 1;
+    grid-column-start: 1;    
+    overflow: hidden;
+
   }
   .card > .descripcionCard > .nombre b h4{
     font-size: clamp(0.3rem ,1rem, 1.5rem);
-    overflow: hidden;
     grid-column: 1;
     grid-column-start: 1;
    }
@@ -1123,10 +1370,11 @@
   top: -2rem;
   } */
   .cardContainer{
-    display: flex;
+    /*display: flex;
     justify-content: space-between;
+     flex-wrap: wrap;*/
     max-width: 90vw;
-    flex-wrap: wrap;
+   
 
   }
   section{
@@ -1141,24 +1389,46 @@
   .menuHamburguesa{
     display: none;
   }
-
+  .boton-carrito{
+    color: var(--grises-paleta1-3);
+    background-color: var(--azules-paleta1-1);
+    margin: 0.5rem;
+    padding: unset;
+    border-radius: 0.5rem;
+    border: solid 1px var(--grises-paleta1-3);
+    width: 5rem;
+    height: 3rem;
+  }
+  .lista-carrito{
+    width: 85vw;
+    align-self: center;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
   }
 
 
-  /*
-  fuente: w3schools 
+  }
+  table{
+ 
+    box-sizing: content-box;
+    
+    margin: 2rem;     
+    border: 1px solid var(--grises-paleta2-2);
+    
+background-color: var(--grises-paleta2-1);
+    border-radius: 1rem;
+    padding: 2%;
 
-  @media only screen and (max-width: 600px) {...}
+   /* border: solid 1px var(--grises-paleta2-4);*/
+  }
+  tr{
+    border-bottom: 1px solid var(--grises-paleta2-2);
+    align-items: center;
+  }
+  td{
+    border-bottom: 1px solid var(--grises-paleta2-2);
+    border-right: 1px solid var(--grises-paleta2-2);
+    align-items: center; 
+  }
 
-  @media only screen and (min-width: 600px) {...}
-
-  @media only screen and (min-width: 768px) {...}
-
-  @media only screen and (min-width: 992px) {...}
-
-  @media only screen and (min-width: 1200px) {...}
-
-
-
-
-  */
+  
