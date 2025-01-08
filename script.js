@@ -10,6 +10,9 @@ var productosDeApi =[];
 
 
 actualizarContador()
+const elts = document.getElementsByTagName("*");
+
+
 
 function mostrarProductos(dataDeProductos, claseDeContenedor)
 {
@@ -76,10 +79,8 @@ let cart = JSON.parse(localStorage.getItem("cart") ) || [];
 cart.push(unProducto)
 localStorage.setItem("cart", JSON.stringify(cart))
 console.log(`se agrego al carrito el producto ${unProducto.title}`)
-cart.addEventListener("change", actualizarContador())
-  
-
-}
+actualizarContador()
+  }
 
 function persistirEnLocalStorage(product){
 /*
